@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>BmR</title>
+	<style type="text/css" media="screen">
+		form {
+			border: thin solid #666;
+			width: 25em;
+			padding: 1em;
+		}
+		
+		legend {
+			font-size: 1.5em;
+			margin-bottom: 1em;
+		}
+		
+		input[type=number] {
+			text-align: right;
+		}
+		
+		label,
+		span,
+		output {
+			display: inline-block;
+			width: 12em;
+		}
+		
+		form p {
+			font-weight: bold;
+		}
+		
+		output {
+			width: 10em;
+			text-align: right;
+		}
+
+	</style>
+	<script type="text/javascript">
+		//<![CDATA[
+		document.addEventListener('DOMContentLoaded', function () {
+			function rechne() {
+				var klein = document.getElementById('klein'),
+					mittel = document.getElementById('mittel'),
+					gross = document.getElementById('gross');
+				var summe = (klein.valueAsNumber *0.33) + (mittel.valueAsNumber *0.5) + (gross.valueAsNumber * 0.75);
+				summe = summe.toFixed(2);
+				document.getElementById('betrag')
+					.value = summe;
+			}
+			document.getElementById("myForm")
+				.addEventListener("input", rechne);
+		});
+		//]]>
+
+	</script>
+</head>
+
+<body>
+	<h1>BiermengenRechner</h1>
+	<main>
+		<form id="myForm">
+			<legend>Rechnung</legend>
+			<label for="klein">Flasche 0,33 l klein</label>
+			<input type="number" min="0" id="klein" value="0">
+			<label for="mittel">Flasche 0,5 l mittel</label>
+			<input type="number" min="0" id="mittel" value="0">
+			<label for="gross">Flasche 0,75 l groß</label>
+			<input type="number" min="0" id="gross" value="0">
+			<p><span>Biermenge:</span>
+				<output id="betrag" >0</output> l</p>
+		</form>
+	</main>
+</body>
+
+</html>
