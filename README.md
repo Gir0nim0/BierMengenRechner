@@ -9,4 +9,4 @@ Tool zur Berechnung der abgefüllten Biermenge anhand von verschiedenen Flaschen
  
  -----------------------------------------------------------------------------------------------------------------------------------------
                                              
- - 22.01.2019 : *1L Flasche wurde hinzugefügt und grafisch wurden ein paar Sachen angepasst*
+ - 22.01.2019 : *BmR.exe + BmR.py : 1L Flasche wurde hinzugefügt und grafisch wurden ein paar Sachen angepasst*
